@@ -59,18 +59,16 @@
     <img class="bg-[#12132D] w-screen h-screen rounded-3xl" src="images/bgbanner.png" alt="">
    </div>
 
-   <div class="flex flex-col gap-9 w-full px-2 my-3  md:flex-col lg:flex-row justify-around  absolute top-[30%] ">
+   <div class="flex flex-col gap-9 w-full px-2 my-3  md:flex-col lg:flex-row justify-around  absolute top-[50%] ">
 
     <div class="text-white max-w-96 break-words">
       <h1 class="text-3xl font-extrabold lg:text-5xl">Welcome to the <br> ReTro Forum</h1>
-      <p class="text-2xl font-bold ">Share your favorite opinion and win and wp forum coffee mug!ssssssssssssssssssssssssssssssssssssssssssssss
-        sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-        sssssssssssssssssssssssssssssssssssssssssssssssssssss
+      <p class="text-2xl font-bold ">Share your favorite opinion and win and wp forum coffee mug!
       </p>
       <label class="input input-bordered flex items-center gap-2">
-        <input type="text" class="grow" placeholder="Search" />
+        <input id="input-Text" type="text" class="grow  text-black" placeholder="Search" />
         <!-- <span class="badge badge-info">Optional</span> -->
-         <button class="p-3 px-4 my-2 text-xl font-semibold bg-[#797DFC] rounded-3xl">search</button>
+         <button onclick="searchHandler()" class="p-3 px-4 my-2 text-xl font-semibold bg-[#797DFC] rounded-3xl">search</button>
       </label>
     </div>
 
@@ -134,14 +132,17 @@
 
   </div>
 
-    <div class="flex flex-col gap-5 p-5 bg-[#12132d0d] rounded-xl max-h-[400px] overflow-scroll">
+    <div id="mark-box" class="flex flex-col gap-5 p-5 bg-[#12132d0d] rounded-xl max-h-[400px] overflow-scroll">
 
-   <div class="flex justify-between py-5 rounded-2xl px-2 bg-green-600 sticky top-0 z-10">
-    <h1  class="font-extrabold text-[#12132D] text-xl">Title</h1>
-    <h1 class="inline-flex gap-3"> <img class="w-6 h-6" src="images/icon/Frame(4).png" alt="">Mark as read <span>(4)</span></h1>
-   </div>
-
-    <div class="flex justify-between p-4 bg-white rounded-xl items-center h-auto">
+      <div class="flex justify-between py-5 rounded-2xl px-2 bg-green-600 sticky top-0 z-10">
+        <h1  class="font-extrabold text-[#12132D] text-xl">Title</h1>
+        <h1 class="inline-flex gap-3"> <img class="w-6 h-6" src="images/icon/Frame(4).png" alt="">Mark as read (<span id="count">0</span>)</h1>
+       </div>
+    <!-- <div id="markAsRead" class="flex justify-between p-4 bg-white rounded-xl items-center h-auto">
+      <h1 class="text-[#12132D] font-semibold text-[16px]">10 Kids Unaware of Their Halloween Costume</h1>
+      <h1 class="inline-flex"><img class="w-8 h-8" src="images/icon/tabler-icon-eye.png" alt=""> <span>345</span></h1>
+    </div> -->
+    <!-- <div class="flex justify-between p-4 bg-white rounded-xl items-center h-auto">
       <h1 class="text-[#12132D] font-semibold text-[16px]">10 Kids Unaware of Their Halloween Costume</h1>
       <h1 class="inline-flex"><img class="w-8 h-8" src="images/icon/tabler-icon-eye.png" alt=""> <span>345</span></h1>
     </div>
@@ -160,23 +161,7 @@
     <div class="flex justify-between p-4 bg-white rounded-xl items-center h-auto">
       <h1 class="text-[#12132D] font-semibold text-[16px]">10 Kids Unaware of Their Halloween Costume</h1>
       <h1 class="inline-flex"><img class="w-8 h-8" src="images/icon/tabler-icon-eye.png" alt=""> <span>345</span></h1>
-    </div>
-    <div class="flex justify-between p-4 bg-white rounded-xl items-center h-auto">
-      <h1 class="text-[#12132D] font-semibold text-[16px]">10 Kids Unaware of Their Halloween Costume</h1>
-      <h1 class="inline-flex"><img class="w-8 h-8" src="images/icon/tabler-icon-eye.png" alt=""> <span>345</span></h1>
-    </div>
-    <div class="flex justify-between p-4 bg-white rounded-xl items-center h-auto">
-      <h1 class="text-[#12132D] font-semibold text-[16px]">10 Kids Unaware of Their Halloween Costume</h1>
-      <h1 class="inline-flex"><img class="w-8 h-8" src="images/icon/tabler-icon-eye.png" alt=""> <span>345</span></h1>
-    </div>
-    <div class="flex justify-between p-4 bg-white rounded-xl items-center h-auto">
-      <h1 class="text-[#12132D] font-semibold text-[16px]">10 Kids Unaware of Their Halloween Costume</h1>
-      <h1 class="inline-flex"><img class="w-8 h-8" src="images/icon/tabler-icon-eye.png" alt=""> <span>345</span></h1>
-    </div>
-    <div class="flex justify-between p-4 bg-white rounded-xl items-center h-auto">
-      <h1 class="text-[#12132D] font-semibold text-[16px]">10 Kids Unaware of Their Halloween Costume</h1>
-      <h1 class="inline-flex"><img class="w-8 h-8" src="images/icon/tabler-icon-eye.png" alt=""> <span>345</span></h1>
-    </div>
+    </div> -->
 
   </div>
 
@@ -202,68 +187,9 @@
           <h1 class="font-extrabold text-[#12132D] text-4xl">Let’s Discuss</h1>
           <p class="text-xl max-w-96">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
         </div>
-       <div id="last conatainer" class="flex flex-col gap-3 lg:flex-row justify-between mt-6">
-        <div class="max-w-[375px] max-h-[482px] flex flex-col gap-2 border-[2px] border-black rounded-lg p-3">
-          <img class="max-w-80 max-h-48 border-[2px] border-black rounded-xl" src="images/logo.png" alt="">
-          <h1 class="inline-flex gap-3"><img src="images/icon/Frame(5).png" alt=""><span>26 march 2024</span> </h1>
-          <h1 class="text-black text-2xl font-semibold">What will a mars habitat force that impact in our daily life!!!</h1>
-          <p class="text-xl max-w-96">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-          <div class="flex items-center gap-6">
-            <div>
-              <img class="w-10 h-10 rounded-full border-[2px] border-black" src="images/icon/Frame(1).png" alt="">
-            </div>
-            <div class="flex flex-col">
-              <h1 class="text-black text-2xl font-semibold">name is name</h1>
-              <h1 class="text-black text-xl">unknown</h1>
-            </div>
-          </div>
-        </div>
-        <div class="max-w-[375px] max-h-[482px] flex flex-col gap-2 border-[2px] border-black rounded-lg p-3">
-          <img class="max-w-80 max-h-48 border-[2px] border-black rounded-xl" src="images/logo.png" alt="">
-          <h1 class="inline-flex gap-3"><img src="images/icon/Frame(5).png" alt=""><span>26 march 2024</span> </h1>
-          <h1 class="text-black text-2xl font-semibold">What will a mars habitat force that impact in our daily life!!!</h1>
-          <p class="text-xl max-w-96">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-          <div class="flex items-center gap-6">
-            <div>
-              <img class="w-10 h-10 rounded-full border-[2px] border-black" src="images/icon/Frame(1).png" alt="">
-            </div>
-            <div class="flex flex-col">
-              <h1 class="text-black text-2xl font-semibold">name is name</h1>
-              <h1 class="text-black text-xl">unknown</h1>
-            </div>
-          </div>
-        </div>
-        <div class="max-w-[375px] max-h-[482px] flex flex-col gap-2 border-[2px] border-black rounded-lg p-3">
-          <img class="max-w-80 max-h-48 border-[2px] border-black rounded-xl" src="images/logo.png" alt="">
-          <h1 class="inline-flex gap-3"><img src="images/icon/Frame(5).png" alt=""><span>26 march 2024</span> </h1>
-          <h1 class="text-black text-2xl font-semibold">What will a mars habitat force that impact in our daily life!!!</h1>
-          <p class="text-xl max-w-96">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-          <div class="flex items-center gap-6">
-            <div>
-              <img class="w-10 h-10 rounded-full border-[2px] border-black" src="images/icon/Frame(1).png" alt="">
-            </div>
-            <div class="flex flex-col">
-              <h1 class="text-black text-2xl font-semibold">name is name</h1>
-              <h1 class="text-black text-xl">unknown</h1>
-            </div>
-          </div>
-        </div>
-        <div class="max-w-[375px] max-h-[482px] flex flex-col gap-2 border-[2px] border-black rounded-lg p-3">
-          <img class="max-w-80 max-h-48 border-[2px] border-black rounded-xl" src="images/logo.png" alt="">
-          <h1 class="inline-flex gap-3"><img src="images/icon/Frame(5).png" alt=""><span>26 march 2024</span> </h1>
-          <h1 class="text-black text-2xl font-semibold">What will a mars habitat force that impact in our daily life!!!</h1>
-          <p class="text-xl max-w-96">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-          <div class="flex items-center gap-6">
-            <div>
-              <img class="w-10 h-10 rounded-full border-[2px] border-black" src="images/icon/Frame(1).png" alt="">
-            </div>
-            <div class="flex flex-col">
-              <h1 class="text-black text-2xl font-semibold">name is name</h1>
-              <h1 class="text-black text-xl">unknown</h1>
-            </div>
-          </div>
-  </div>
+       <div id="last-conatainer" class="flex flex-col gap-3 lg:flex-row justify-between mt-6">
        </div>
+
        </section>
   </main>
   <script src="index.js"></script>
